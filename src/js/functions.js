@@ -21,4 +21,23 @@ class Calculator {
     return +num1 * +num2;
   }
 }
-module.exports = { capitalizeStr, reverseStr, Calculator };
+function caesarCipher(text, shift) {
+  let result = "";
+  shift = shift % 26;
+  if (shift < 0) {
+    shift += 26;
+  }
+
+  for (let i = 0; i < text.length; i++) {
+    let char = text[i];
+    let charCode = char.charCodeAt(0);
+    if (charCode >= 65 && charCode <= 90) {
+      char = String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+    } else if (charCode >= 97 && charCode <= 122) {
+      char = String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+    }
+    result += char;
+  }
+  return result;
+}
+module.exports = { capitalizeStr, reverseStr, Calculator, caesarCipher };
