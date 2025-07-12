@@ -7,4 +7,9 @@ function capitalizeStr(str) {
 function reverseStr(str) {
   return str.split("").reverse().join("");
 }
-module.exports = { capitalizeStr, reverseStr };
+class Calculator {
+  add(num1, num2) {
+    return +num1 + +num2;
+  }
+}
+module.exports = { capitalizeStr, reverseStr, Calculator };
