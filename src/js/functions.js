@@ -4,4 +4,7 @@ function capitalizeStr(str) {
   str = stringArr.join("");
   return str;
 }
-module.exports = capitalizeStr;
+function reverseStr(str) {
+  return str.split("").reverse().join("");
+}
+module.exports = { capitalizeStr, reverseStr };
