@@ -11,5 +11,6 @@ describe("Test Different Functions", () => {
   it("Calculator", () => {
     let calculator = new Calculator();
     expect(calculator.add(1, 2)).toBe(3);
+    expect(calculator.subtract(2, 1)).toBe(1);
   });
 });
