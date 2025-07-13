@@ -1,5 +1,10 @@
 import { capitalizeStr } from "../js/functions";
-import { reverseStr, Calculator, caesarCipher } from "../js/functions";
+import {
+  reverseStr,
+  Calculator,
+  caesarCipher,
+  analyzeArr,
+} from "../js/functions";
 
 describe("Test Different Functions", () => {
   it("Capitalize the string", () => {
@@ -19,5 +24,13 @@ describe("Test Different Functions", () => {
     expect(caesarCipher("xyz", 3)).toBe("abc");
     expect(caesarCipher("Xyz", 3)).toBe("Abc");
     expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+  });
+  it("Analyze array", () => {
+    expect(analyzeArr([1, 8, 3, 4, 2, 6])).toEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
   });
 });
