@@ -40,4 +40,20 @@ function caesarCipher(text, shift) {
   }
   return result;
 }
-module.exports = { capitalizeStr, reverseStr, Calculator, caesarCipher };
+function analyzeArr(arr) {
+  arr = arr.sort((a, b) => a - b);
+  let averageOfArr = arr.reduce((prev, cur) => prev + cur, 0) / arr.length;
+  return {
+    average: averageOfArr,
+    min: arr[0],
+    max: arr[arr.length - 1],
+    length: arr.length,
+  };
+}
+module.exports = {
+  capitalizeStr,
+  reverseStr,
+  Calculator,
+  caesarCipher,
+  analyzeArr,
+};
